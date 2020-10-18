@@ -1,0 +1,86 @@
+Algoritmo "Calculadora, Tabuada, Jogar Dados"
+
+Var
+// Seção de Declarações das variáveis 
+opcao1 : inteiro
+valor1, valor2, operacao, resultado : inteiro
+i, valor4, multiplicacao : inteiro
+dado : inteiro
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+// Menu Inicial
+
+enquanto (opcao1 < 1) ou ( opcao1 >3) faca
+   escreval("Escolha uma opcao")
+   escreval("1 - Calculadora")
+   escreval("2 - Tabuada")
+   escreval("3 - Jogar 3 dados de 6 lados")
+   leia(opcao1)
+   limpatela
+fimenquanto
+
+// Apos o usuario escolher
+escolha(opcao1)
+
+caso 1 
+
+     //Lendo Valores do usuario
+     escreval("Digite dois valores")
+     leia(valor1,valor2)
+     //Valindaod e escolhendo operacao
+     enquanto (operacao < 1) ou ( operacao > 5) faca
+     limpatela
+        escreval("Escolha uma operacao")
+        escreval("1 - soma")
+        escreval("2 - subtracao")
+        escreval("3 - Multiplicacao")
+        escreval("4 - Divisao")
+        escreval("5 - Resto da divisao")
+        leia(operacao)
+
+        escolha ( operacao )
+        caso 1
+              resultado <- (valor1+valor2)
+        caso 2
+              resultado <-(valor1-valor2)
+        caso 3
+              resultado <-(valor1*valor2)
+        caso 4
+              resultado <-(valor1/valor2)
+        caso 5
+              resultado <-(valor1 MOD valor2)
+        outrocaso
+                 escreval("Opcao invalida")
+
+   fimescolha
+             escreval("O resultado e :", resultado)
+fimenquanto
+
+caso 2 
+
+//Usuario Digita o valor a ser multiplicado
+
+      // Valida o valor para a tabuada
+      repita
+         escreval("Qual tabuada deseja saber ? {Entre 1 e 10}")
+         leia(valor4)
+         limpatela
+      ate (valor4 >= 0 ) ou (valor4 <= 10)
+
+      para i de 1 ate 10 passo 1 faca
+         multiplicacao<- valor4 * i
+         escreval(valor4, "x", i, "=",multiplicacao)
+      fimpara
+
+
+caso 3
+
+     para i de 1 ate 3 faca
+        aleatorio on
+        leia(dado)
+        aleatorio off
+     fimpara
+
+fimescolha
+Fimalgoritmo
